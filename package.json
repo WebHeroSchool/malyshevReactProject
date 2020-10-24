@@ -1,0 +1,22 @@
+{
+  "name": "malyshevreactproject",
+  "version": "1.0.0",
+  "description": "My first React project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "say": "echo Hello World!",
+    "build": "mkdir build",
+    "delete": "rmdir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebHeroSchool/malyshevReactProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebHeroSchool/malyshevReactProject/issues"
+  },
+  "homepage": "https://github.com/WebHeroSchool/malyshevReactProject#readme"
+}
