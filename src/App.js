@@ -1,12 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import * as nums from './numbers';
 
-const city = 'St.-Petersburg';
-const count = 17;
-const number = 5;
-const sum = count + number;
-const flag = true;
-const point = false;
+const result = 'count * length = ' + nums.count * nums.length;
 
 function App() {
   return (
@@ -22,23 +18,7 @@ function App() {
         Hello Mentor
         </p>
         <p>
-        {city}
-        </p>
-        <p>
-        {count}
-        </p>
-        <p>
-        {sum}
-        </p>
-        <p>
-        {flag && 'Flag is true'}
-        {undefined}
-        {null}
-        {false}
-        {true}
-        </p>
-        <p>
-        {point ? 'Point is true' : 'Point is false'}
+        {result}
         </p>
         <a
           className="App-link"
