@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import * as nums from './numbers';
 
-const result = nums.count + nums.length;
+const result = 'count * length = ' + nums.count * nums.length;
 
 function App() {
   return (
