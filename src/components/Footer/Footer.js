@@ -1,5 +1,3 @@
-const Footer = () => (<div>
-	<p>Счетчик Фильтр Кнопка</p>
-</div>)
+const Footer = ({ count }) => (<div>Осталось выполнить дел: {count}</div>)
 
 export default Footer;
