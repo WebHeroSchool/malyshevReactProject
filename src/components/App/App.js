@@ -2,11 +2,11 @@ import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 
-const todoItem = 'Написать новое приложение';
+const todoItems = ["Написать новое приложение", "Провести рефакторинг", "Протестировать"];
 const App = () => (<div>
   <h1>todos</h1>
   <InputItem />
-  <ItemList todoItem={todoItem} />
+  <ItemList todoItems={todoItems} />
   <Footer count={3} />
   </div>);
 
