@@ -1,3 +1,3 @@
-const Item = ({ todoItems }) => (<span>{todoItems}</span>);
+const Item = ({ value }) => (<span>{value}</span>);
 
 export default Item;
