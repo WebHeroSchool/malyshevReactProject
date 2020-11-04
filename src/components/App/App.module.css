@@ -1,0 +1,10 @@
+.wrap {
+  margin: auto;
+  width: 300px;
+}
+
+.title {
+  font-family: Marker Felt, fantasy;
+  font-weight: normal;
+  text-align: center;
+}
