@@ -1,20 +1,22 @@
+import React from 'react';
 import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
-import styles from './App.module.css'
+import styles from './App.module.css';
 
-const App = () => {
-  const items = [
+class App extends React.Component {
+  render() {
+    const items = [
   {
-    value: "Написать новое приложение",
+    value: "Write a new app",
     isDone: true
   },
   {
-    value: "Провести рефакторинг",
+    value: "Refactor",
     isDone: false
   },
   {
-    value: "Протестировать",
+    value: "Test",
     isDone: false
   }
   ];
@@ -25,6 +27,7 @@ const App = () => {
     <ItemList items={items} />
     <Footer count={3} />
   </div>);
-}
+  } 
+};
 
 export default App;

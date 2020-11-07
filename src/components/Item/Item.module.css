@@ -1,7 +1,11 @@
 .item {
+	font-family: FreeMono, monospace;
+  font-weight: normal;
 	color: #333;
 }
 
 .done {
+	font-family: FreeMono, monospace;
+  font-weight: normal;
 	text-decoration: line-through;
 }
