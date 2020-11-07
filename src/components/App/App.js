@@ -6,15 +6,15 @@ import styles from './App.module.css'
 const App = () => {
   const items = [
   {
-    value: "Написать новое приложение",
+    value: "Write a new app",
     isDone: true
   },
   {
-    value: "Провести рефакторинг",
+    value: "Refactor",
     isDone: false
   },
   {
-    value: "Протестировать",
+    value: "Test",
     isDone: false
   }
   ];

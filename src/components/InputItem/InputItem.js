@@ -2,7 +2,7 @@ import TextField from '@material-ui/core/TextField';
 
 const InputItem = () => (<div>
   <TextField
-  id="outlined-full-width"
+  id="standard-full-width"
   style={{ margin: 8 }}
   placeholder="What needs to be done?"
   fullWidth
@@ -10,7 +10,6 @@ const InputItem = () => (<div>
   InputLabelProps={{
     shrink: true,
   }}
-  variant="outlined"
    />
    </div>)
 
