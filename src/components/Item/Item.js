@@ -3,8 +3,8 @@ import classnames from 'classnames';
 import styles from './Item.module.css';
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
-const Item = ({ value, isDone, onClickDone }) => (<button
-  onClick={() => console.log(isDone)}
+const Item = ({ value, isDone, onClickDone, id }) => (<button 
+  onClick={() => onClickDone(id)}
   className={
   classnames({
     [styles.item]: true,
