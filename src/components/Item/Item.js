@@ -1,17 +1,30 @@
 import React from 'react';
 import classnames from 'classnames';
 import styles from './Item.module.css';
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
-const Item = ({ value, isDone, onClickDone, id }) => (<button 
-  onClick={() => onClickDone(id)}
-  className={
-  classnames({
-    [styles.item]: true,
-    [styles.done]: isDone
-  })
-}>
-{value}
-</button>);
+const Item = ({ value, isDone, onClickDone, onClickDelete, id }) => (<div
+  className={styles.wraper}>
+  <div>
+    <button
+    onClick={() => onClickDone(id)}
+    className={
+      classnames({
+        [styles.item]: true,
+        [styles.done]: isDone
+      })
+    }>
+    {value}
+    </button>
+  </div>
+  <div>
+    <IconButton aria-label="delete" onClick={() => onClickDelete(id)}>
+    <DeleteIcon fontSize="small" />
+    </IconButton>
+  </div>
+</div>);
+
 
 export default Item;

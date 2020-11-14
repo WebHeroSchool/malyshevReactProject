@@ -22,7 +22,8 @@ class App extends React.Component {
       isDone: false,
       id: 3
     }
-    ]
+    ],
+    count: 3
   };
 
   onClickDone = id => {
@@ -39,13 +40,37 @@ class App extends React.Component {
     this.setState({ items: newItemList });
   };
 
+  onClickDelete = id => this.setState(state => ({ 
+    items: state.items.filter(item => item.id !== id),
+    count: state.count - 1
+  }));
+
+  onClickAdd = value => this.setState(state => ({
+    items: [
+    ...state.items,
+    {
+      value,
+      if (inputValue: '') {
+        alert ( 'The field must be filled!' )
+      },
+      isDone: false,
+      id: state.count + 1
+    }
+    ],
+    count: state.count + 1
+  }));
+
   render() {
     return (
       <div className={styles.wrap}>
       <h1 className={styles.title}>todos</h1>
-      <InputItem />
-      <ItemList items={this.state.items} onClickDone={this.onClickDone} />
-      <Footer count={3} />
+      <InputItem onClickAdd={this.onClickAdd} />
+      <ItemList
+      items={this.state.items}
+      onClickDone={this.onClickDone}
+      onClickDelete={this.onClickDelete}
+      />
+      <Footer count={this.state.count} />
       </div>);
     }
   };
