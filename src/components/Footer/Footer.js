@@ -24,6 +24,10 @@ const Footer = ({ count }) => (<div className={styles.footer}>
   <div className={styles.wraper}>
   <a className={styles.button} href="#">Clear completed</a>
   </div>
-  </div>)
+  </div>);
+
+Footer.defaultProps = {
+  count: 0
+};
 
 export default Footer;
