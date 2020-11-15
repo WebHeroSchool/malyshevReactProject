@@ -28,7 +28,7 @@ class InputItem extends React.Component {
       placeholder="What needs to be done?"
       fullWidth
       value={this.state.inputValue}
-      onChange={event => this.setState({ inputValue: event.target.value })}
+      onChange={event => this.setState({ inputValue: event.target.value.toUpperCase() })}
       margin="normal"
       InputLabelProps={{
         shrink: true,
