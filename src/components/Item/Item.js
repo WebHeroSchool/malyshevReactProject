@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import styles from './Item.module.css';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
+import PropTypes from 'prop-types';
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
 const Item = ({ value, isDone, onClickDone, onClickDelete, id }) => (<div
@@ -26,9 +27,12 @@ const Item = ({ value, isDone, onClickDone, onClickDelete, id }) => (<div
   </div>
 </div>);
 
-Item.defaultProps = {
-  value: 'New item'
-};
-
+Item.propTypes = {
+  id: PropTypes.number.isRequired,
+  isDone: PropTypes.bool.isRequired,
+  value: PropTypes.string.isRequired,
+  onClickDone: PropTypes.func,
+  onClickDelete: PropTypes.func 
+}
 
 export default Item;
