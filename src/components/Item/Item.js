@@ -7,13 +7,13 @@ import PropTypes from 'prop-types';
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
 class Item extends React.Component {
-  componentDidMount() {
-    this.timerId = setInterval(() => console.log('interval'), 1000)
-  }
+  // componentDidMount() {
+  //   this.timerId = setInterval(() => console.log('interval'), 1000)
+  // }
 
-  componentWillUnmount() {
-    clearInterval(this.timerId)
-  }
+  // componentWillUnmount() {
+  //   clearInterval(this.timerId)
+  // }
 
   render() {
     const { value, isDone, onClickDone, onClickDelete, id } = this.props;
