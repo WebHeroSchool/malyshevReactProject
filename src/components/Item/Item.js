@@ -6,26 +6,40 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import PropTypes from 'prop-types';
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
-const Item = ({ value, isDone, onClickDone, onClickDelete, id }) => (<div
-  className={styles.wraper}>
-  <div>
-    <button
-    onClick={() => onClickDone(id)}
-    className={
-      classnames({
-        [styles.item]: true,
-        [styles.done]: isDone
-      })
-    }>
-    {value}
-    </button>
-  </div>
-  <div>
-    <IconButton aria-label="delete" onClick={() => onClickDelete(id)}>
-    <DeleteIcon fontSize="small" />
-    </IconButton>
-  </div>
-</div>);
+class Item extends React.Component {
+  componentDidMount() {
+    this.timerId = setInterval(() => console.log('interval'), 1000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerId)
+  }
+
+  render() {
+    const { value, isDone, onClickDone, onClickDelete, id } = this.props;
+
+    return (<div
+      className={styles.wraper}>
+      <div>
+      <button
+      onClick={() => onClickDone(id)}
+      className={
+        classnames({
+          [styles.item]: true,
+          [styles.done]: isDone
+        })
+      }>
+      {value}
+      </button>
+      </div>
+      <div>
+      <IconButton aria-label="delete" onClick={() => onClickDelete(id)}>
+      <DeleteIcon fontSize="small" />
+      </IconButton>
+      </div>
+      </div>);
+  }
+}
 
 Item.propTypes = {
   id: PropTypes.number.isRequired,

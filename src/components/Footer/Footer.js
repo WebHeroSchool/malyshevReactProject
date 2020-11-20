@@ -23,7 +23,7 @@ const Footer = ({ count }) => (<div className={styles.footer}>
   </Breadcrumbs>
   </div>
   <div className={styles.wraper}>
-  <a className={styles.button} href="#">Clear completed</a>
+  <button className={styles.button}>Clear completed</button>
   </div>
   </div>);
 

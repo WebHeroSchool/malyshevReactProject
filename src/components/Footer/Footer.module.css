@@ -14,11 +14,16 @@
 .button {
 	font-size: 1rem;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  border: none;
+	cursor: pointer;
   text-decoration: none;
   transition: opacity .5s;
 }
 
 .button:hover {
   opacity: 0.5;
-  text-decoration: underline;
+}
+
+.button:focus {
+	outline: none !important;
 }
