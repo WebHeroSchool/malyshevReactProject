@@ -7,16 +7,16 @@ import styles from './App.module.css';
 class App extends React.Component {
   state = {
     items: [
-    // {
-    //   value: "Write a new app",
-    //   isDone: true,
-    //   id: 1
-    // },
-    // {
-    //   value: "Refactor",
-    //   isDone: false,
-    //   id: 2
-    // },
+    {
+      value: "Write a new app",
+      isDone: true,
+      id: 1
+    },
+    {
+      value: "Refactor",
+      isDone: false,
+      id: 2
+    },
     {
       value: "Test",
       isDone: false,
