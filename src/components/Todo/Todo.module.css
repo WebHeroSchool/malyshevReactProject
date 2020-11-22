@@ -1,0 +1,10 @@
+.wrap {
+  margin: auto;
+  width: 500px;
+}
+
+.title {
+  font-family: Courier New, monospace;
+  font-weight: normal;
+  text-align: center;
+}

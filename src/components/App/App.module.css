@@ -1,10 +1,23 @@
-.wrap {
-  margin: auto;
-  width: 500px;
+body {
+	font-family: FreeMono, monospace;
+	padding-top: 36px;
 }
 
-.title {
-  font-family: Courier New, monospace;
-  font-weight: normal;
-  text-align: center;
+.link {
+	text-decoration: none;
+}
+
+.sidebar {
+	grid-area: sidebar;
+}
+
+.content {
+	grid-area: content;
+}
+
+.wrap {
+	display: grid;
+	grid-template-areas: 'sidebar ... content content';
+	margin: auto;
+	width: 700px;
 }
