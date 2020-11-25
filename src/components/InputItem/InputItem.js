@@ -10,7 +10,7 @@ class InputItem extends React.Component {
 
   onButtonClick = (event) => {
     this.setState({
-      inputValue: event.target.value.toUpperCase(),
+      inputValue: event.target.value.toLowerCase(),
       buttonEnabled: event.target.value.length > 0
     });
 
@@ -27,7 +27,7 @@ class InputItem extends React.Component {
       placeholder="What needs to be done?"
       fullWidth
       value={this.state.inputValue}
-      onChange={event => this.setState({ inputValue: event.target.value.toUpperCase() })}
+      onChange={event => this.setState({ inputValue: event.target.value.toLowerCase() })}
       margin="normal"
       InputLabelProps={{
         shrink: true,
