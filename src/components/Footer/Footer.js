@@ -5,19 +5,19 @@ import styles from './Footer.module.css';
 import PropTypes from 'prop-types';
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
-const Footer = ( { count, onClickFilterAll, onClickFilterNotDone, onClickFilterDone } ) => (<div className={styles.footer}>
+const Footer = ( { count, onClickFilter, filter } ) => (<div className={styles.footer}>
   <div className={styles.count}>
   {count} ITEMS LEFT
   </div>
   <div>
   <ButtonGroup variant="text" color="inherit" aria-label="text primary button group">
-  <Button onClick={()=>onClickFilterAll()}>
+  <Button onClick={() => onClickFilter('all')}>
   All
   </Button>
-  <Button onClick={()=>onClickFilterNotDone()}>
+  <Button onClick={() => onClickFilter('active')}>
   Active
   </Button>
-  <Button onClick= {() => onClickFilterDone()}>
+  <Button onClick= {() => onClickFilter('done')}>
   Completed
   </Button>
   </ButtonGroup>

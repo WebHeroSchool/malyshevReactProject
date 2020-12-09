@@ -53,7 +53,8 @@ class InputItem extends React.Component {
             itemCheck = true;
           } 
         });
-        if (this.state.inputValue !== '' && this.state.inputValue === items.value) {
+        
+        if (this.state.inputValue !== '' && !itemCheck) {
           onClickAdd(this.state.inputValue);
           this.setState({
             inputValue: '',
@@ -62,18 +63,14 @@ class InputItem extends React.Component {
             buttonColor: 'default',
             buttonEnabled: false
           });
-        } 
-        if (this.state.inputValue === '') {
+        } else if (this.state.inputValue === '') {
           this.runErr('You can not add an empty case');
-        }
-        if (itemCheck) {
+        } else if (itemCheck) {
           this.runErr('You cannot add a case that already exists');
           this.setState({
             inputValue: ''
           });
-          console.log(itemCheck);
         }
-        console.log(itemCheck);
       }}
       >
        Add

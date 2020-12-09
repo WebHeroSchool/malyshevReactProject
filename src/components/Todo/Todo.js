@@ -23,11 +23,13 @@ const Todo = () => {
       id: 3
     }
     ],
-    count: 3
+    count: 3,
+    filter: 'all'
   };
 
-  const [items, setAppItem, setInitialState] = useState(initialState.items);
+  const [items, setAppItem] = useState(initialState.items);
   const [count, setCount] = useState(initialState.count);
+  const [filter, setFilter] = useState(initialState.filter);
 
   useEffect(() => {
     
@@ -56,9 +58,24 @@ const Todo = () => {
     setCount(count - 1)
   };
 
-  // const onClickFilterAll = id => {
-  //   setInitialState(items.filter(items => items.id > 0))
-  // };
+  const itemFilter = (items, filter) => {
+    switch(filter) {
+      case 'all':
+      return items;
+      case 'active':
+      return items.filter( item => !item.isDone);
+      case 'done':
+      return items.filter( item => item.isDone);
+      default:
+      return items;
+    }
+  };
+
+  const onClickFilter = itemFilter => {
+    setFilter({ itemFilter });
+  };
+
+  const visibleItems = itemFilter(items, filter);
 
   const onClickAdd = value => {
     const newItems = [
@@ -78,15 +95,14 @@ const Todo = () => {
       <h1 className={styles.title}>todos</h1>
       <InputItem onClickAdd={onClickAdd} items={items} />
       <ItemList
-      items={items}
+      items={visibleItems}
       onClickDone={onClickDone}
       onClickDelete={onClickDelete}
       />
       <Footer
       count={count}
-      // onClickFilterAll={onClickFilterAll}
-      // onClickFilterNotDone={onClickFilterNotDone}
-      // onClickFilterDone={onClickFilterDone}
+      onClickFilter={onClickFilter}
+      filter={filter}
        />
       </div>);
   };
