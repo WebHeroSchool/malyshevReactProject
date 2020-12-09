@@ -8,17 +8,17 @@ const Todo = () => {
   const initialState = {
     items: [
     {
-      value: "Write a new app",
+      value: "WRITE A NEW APP",
       isDone: true,
       id: 1
     },
     {
-      value: "Refactor",
+      value: "REFACTOR",
       isDone: false,
       id: 2
     },
     {
-      value: "Test",
+      value: "TEST",
       isDone: false,
       id: 3
     }
@@ -26,15 +26,15 @@ const Todo = () => {
     count: 3
   };
 
-  const [items, setAppItem] = useState(initialState.items);
+  const [items, setAppItem, setInitialState] = useState(initialState.items);
   const [count, setCount] = useState(initialState.count);
 
   useEffect(() => {
-    console.log('update');
+    
   },);
 
   useEffect(() => {
-    console.log('mount');
+    
   }, [])
 
   const onClickDone = id => {
@@ -56,6 +56,10 @@ const Todo = () => {
     setCount(count - 1)
   };
 
+  // const onClickFilterAll = id => {
+  //   setInitialState(items.filter(items => items.id > 0))
+  // };
+
   const onClickAdd = value => {
     const newItems = [
     ...items,
@@ -72,13 +76,18 @@ const Todo = () => {
     return (
       <div className={styles.wrap}>
       <h1 className={styles.title}>todos</h1>
-      <InputItem onClickAdd={onClickAdd} />
+      <InputItem onClickAdd={onClickAdd} items={items} />
       <ItemList
       items={items}
       onClickDone={onClickDone}
       onClickDelete={onClickDelete}
       />
-      <Footer count={count} />
+      <Footer
+      count={count}
+      // onClickFilterAll={onClickFilterAll}
+      // onClickFilterNotDone={onClickFilterNotDone}
+      // onClickFilterDone={onClickFilterDone}
+       />
       </div>);
   };
 
