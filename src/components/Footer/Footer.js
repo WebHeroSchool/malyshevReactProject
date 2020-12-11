@@ -5,7 +5,7 @@ import styles from './Footer.module.css';
 import PropTypes from 'prop-types';
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
-const Footer = ( { count, onClickFilter, filter } ) => (<div className={styles.footer}>
+const Footer = ( { count, onClickFilter, itemFilter } ) => (<div className={styles.footer}>
   <div className={styles.count}>
   {count} ITEMS LEFT
   </div>

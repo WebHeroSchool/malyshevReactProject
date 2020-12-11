@@ -58,24 +58,18 @@ const Todo = () => {
     setCount(count - 1)
   };
 
-  const itemFilter = (items, filter) => {
-    switch(filter) {
-      case 'all':
-      return items;
-      case 'active':
-      return items.filter( item => !item.isDone);
-      case 'done':
-      return items.filter( item => item.isDone);
-      default:
-      return items;
+  const itemFilter = () => {
+    if (filter === 'active') {
+      return items.filter(item => !item.isDone);
+    } if (filter === 'done'){
+      return items.filter(item => item.isDone);
     }
+    return items;
   };
 
-  const onClickFilter = itemFilter => {
-    setFilter({ itemFilter });
+  const onClickFilter = (name) => {
+    setFilter(name)
   };
-
-  const visibleItems = itemFilter(items, filter);
 
   const onClickAdd = value => {
     const newItems = [
@@ -95,13 +89,14 @@ const Todo = () => {
       <h1 className={styles.title}>todos</h1>
       <InputItem onClickAdd={onClickAdd} items={items} />
       <ItemList
-      items={visibleItems}
+      items={items}
       onClickDone={onClickDone}
       onClickDelete={onClickDelete}
       />
       <Footer
       count={count}
       onClickFilter={onClickFilter}
+      itemFilter={itemFilter}
       filter={filter}
        />
       </div>);

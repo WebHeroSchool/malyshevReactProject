@@ -8,6 +8,7 @@ class About extends React.Component {
   state = {
     userName: '',
     avatarUrl: '',
+    userBio: '',
     isLoading: true,
     repoList: [],
     errorLoading: false,
@@ -35,23 +36,34 @@ class About extends React.Component {
     }).then((user) => {
       this.setState({
         userName: user.data.login,
-        avatarUrl: user.data.avatar_url
+        avatarUrl: user.data.avatar_url,
+        userBio: user.data.bio
       });
     });
   }
 
   render() {
-    const { userName, avatarUrl, isLoading, repoList, errorLoading, errorText } = this.state;
+    const { userName, avatarUrl, userBio, isLoading, repoList, errorLoading, errorText } = this.state;
     return (
       <div>
-      <h1>{ isLoading ? <CircularProgress color="secondary" /> : 'About me' }</h1>
+      <img src={avatarUrl} alt='avatar' />
+      <h1>{ isLoading ? <CircularProgress color="secondary" /> : 'Malyshev Maxim' }</h1>
       {!isLoading &&
         <div>
         {errorLoading ? <p>Error: { errorText } </p> :
         <ol>
         <div>
-        <p>User: { userName }</p>
-        <img src={avatarUrl} alt='avatar' />
+        <p>My profile on GitHub <a href="https://github.com/malyshevmaxim">{ userName }</a></p>
+        <p>{userBio}</p>
+        </div>
+        <div>
+        <h2>My projects</h2>
+        <p>Responsive layout of one-page sites (HTML, CSS):</p>
+        <p><a href="https://malyshevmaxim.github.io/Tesla/">Tesla</a></p>
+        <p><a href="https://malyshevmaxim.github.io/App.creation/">App.creation</a></p>
+        <p><a href="https://malyshevmaxim.github.io/Digital-meeting-day/">Digital meeting day</a></p>
+        <p>Card game (JavaScript):</p>
+        <p><a href="https://malyshevmaxim.github.io/Find-a-bug/">"Find a bug"</a></p>
         </div>
         <h2>My repositories</h2>
         {repoList.map(repo =>(<li key={repo.id}>
