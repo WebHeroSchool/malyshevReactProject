@@ -1,0 +1,57 @@
+.wrap {
+  margin: auto;
+  width: 500px;
+}
+
+.title {
+  font-family: Courier New, monospace;
+  font-weight: normal;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Courier New, monospace;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.icon {
+  display: block;
+  width: 7%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.links {
+  font-family: Courier New, monospace;
+  color: #356eff;
+  text-decoration: none;
+  transition: opacity .5s;
+}
+
+.links:hover,
+.marklink:hover {
+  opacity: 0.5;
+}
+
+.mark {
+  font-family: Courier New, monospace;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+.marklink {
+  color: #356eff;
+  text-decoration: none;
+  transition: opacity .5s;
+}

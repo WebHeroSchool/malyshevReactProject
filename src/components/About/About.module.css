@@ -1,0 +1,36 @@
+.wrap {
+  margin: auto;
+  width: 500px;
+}
+
+.title {
+  font-family: Courier New, monospace;
+  font-weight: normal;
+  text-align: center;
+}
+
+.img {
+  text-align: center;
+}
+
+.avatar {
+  width: 50%;
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+.text {
+  font-family: Courier New, monospace;
+  font-weight: normal;
+}
+
+.link {
+  font-family: Courier New, monospace;
+  color: #356eff;
+  text-decoration: none;
+  transition: opacity .5s;
+}
+
+.link:hover {
+  opacity: 0.5;
+}

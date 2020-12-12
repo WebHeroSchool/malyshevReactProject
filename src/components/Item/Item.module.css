@@ -1,32 +1,32 @@
 .wraper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .wrapper-button {
-	align-items: center;
+  align-items: center;
 }
 
 .item {
-	font-family: FreeMono, monospace;
-	color: #333;
-	text-decoration: none;
+  font-family: FreeMono, monospace;
+  color: #333;
+  text-decoration: none;
 }
 
 .done {
-	font-family: FreeMono, monospace;
+  font-family: FreeMono, monospace;
   font-weight: normal;
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .item,
 .done {
-	font-size: 17px;
-	font-weight: normal;
-	border: none;
-	cursor: pointer;
-	transition: opacity .5s;
+  font-size: 17px;
+  font-weight: normal;
+  border: none;
+  cursor: pointer;
+  transition: opacity .5s;
 }
 
 .item:hover,
@@ -36,5 +36,5 @@
 
 .item:focus,
 .done:focus {
-	outline: none !important;
+  outline: none !important;
 }
