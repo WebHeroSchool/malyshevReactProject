@@ -9,7 +9,7 @@ const Todo = () => {
     items: [
     {
       value: "WRITE A NEW APP",
-      isDone: true,
+      isDone: false,
       id: 1
     },
     {
@@ -89,7 +89,7 @@ const Todo = () => {
       <h1 className={styles.title}>todos</h1>
       <InputItem onClickAdd={onClickAdd} items={items} />
       <ItemList
-      items={items}
+      itemFilter={itemFilter}
       onClickDone={onClickDone}
       onClickDelete={onClickDelete}
       />
