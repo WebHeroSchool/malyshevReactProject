@@ -1,29 +1,26 @@
-import Typography from '@material-ui/core/Typography';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import styles from './Footer.module.css';
 import PropTypes from 'prop-types';
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
-const Footer = ({ count }) => (<div className={styles.footer}>
+const Footer = ( { count, onClickFilter, itemFilter } ) => (<div className={styles.footer}>
   <div className={styles.count}>
-  {count} items left
+  {count} ITEMS LEFT
   </div>
   <div>
-  <Breadcrumbs aria-label="breadcrumb">
-  <Link color="inherit" href="/">
-  Completed
-  </Link>
-  <Link color="inherit" href="/getting-started/installation/">
-  Active
-  </Link>
-  <Typography color="textPrimary">
+  <ButtonGroup variant="text" color="inherit" aria-label="text primary button group">
+  <Button onClick={() => onClickFilter('all')}>
   All
-  </Typography>
-  </Breadcrumbs>
-  </div>
-  <div className={styles.wraper}>
-  <button className={styles.button}>Clear completed</button>
+  </Button>
+  <Button onClick={() => onClickFilter('active')}>
+  Active
+  </Button>
+  <Button onClick= {() => onClickFilter('done')}>
+  Completed
+  </Button>
+  </ButtonGroup>
   </div>
   </div>);
 
