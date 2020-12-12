@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/malyshevReactProject/static/css/main.26998889.chunk.css",
-    "main.js": "/malyshevReactProject/static/js/main.da7fb587.chunk.js",
-    "main.js.map": "/malyshevReactProject/static/js/main.da7fb587.chunk.js.map",
+    "main.js": "/malyshevReactProject/static/js/main.afb962ef.chunk.js",
+    "main.js.map": "/malyshevReactProject/static/js/main.afb962ef.chunk.js.map",
     "runtime-main.js": "/malyshevReactProject/static/js/runtime-main.0f8bb5cd.js",
     "runtime-main.js.map": "/malyshevReactProject/static/js/runtime-main.0f8bb5cd.js.map",
-    "static/js/2.4cceaa03.chunk.js": "/malyshevReactProject/static/js/2.4cceaa03.chunk.js",
-    "static/js/2.4cceaa03.chunk.js.map": "/malyshevReactProject/static/js/2.4cceaa03.chunk.js.map",
+    "static/js/2.cff58d8f.chunk.js": "/malyshevReactProject/static/js/2.cff58d8f.chunk.js",
+    "static/js/2.cff58d8f.chunk.js.map": "/malyshevReactProject/static/js/2.cff58d8f.chunk.js.map",
     "index.html": "/malyshevReactProject/index.html",
     "static/css/main.26998889.chunk.css.map": "/malyshevReactProject/static/css/main.26998889.chunk.css.map",
-    "static/js/2.4cceaa03.chunk.js.LICENSE.txt": "/malyshevReactProject/static/js/2.4cceaa03.chunk.js.LICENSE.txt",
+    "static/js/2.cff58d8f.chunk.js.LICENSE.txt": "/malyshevReactProject/static/js/2.cff58d8f.chunk.js.LICENSE.txt",
     "static/media/call.d3584894.png": "/malyshevReactProject/static/media/call.d3584894.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0f8bb5cd.js",
-    "static/js/2.4cceaa03.chunk.js",
+    "static/js/2.cff58d8f.chunk.js",
     "static/css/main.26998889.chunk.css",
-    "static/js/main.da7fb587.chunk.js"
+    "static/js/main.afb962ef.chunk.js"
   ]
 }
