@@ -55,3 +55,15 @@
   text-decoration: none;
   transition: opacity .5s;
 }
+
+@media (max-width: 505px) {
+  .wrap {
+    width: 400px;
+  }
+}
+
+@media (max-width: 410px) {
+  .wrap {
+    width: 300px;
+  }
+}

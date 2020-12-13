@@ -54,7 +54,7 @@ class About extends React.Component {
       {!isLoading &&
         <div>
         {errorLoading ? <p>Error: { errorText } </p> :
-        <ol>
+        <ol className={styles.ol}>
         <div>
         <p className={styles.text}>My profile on GitHub <a className={styles.link} href="https://github.com/malyshevmaxim">{ userName }</a></p>
         <p className={styles.text}>{userBio}</p>
@@ -75,6 +75,9 @@ class About extends React.Component {
           <p className={styles.text}>{repo.language}</p>
           </li>))}
         </ol>}
+        <div>
+        <p className={styles.mark}>Created in WebHeroSchool</p>
+        </div>
         </div>
       }
       </div>
