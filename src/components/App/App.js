@@ -30,9 +30,6 @@ const App = () =>
   <Route path='/contacts' component={Contacts} />
   </Card>
   </div>
-  <div>
-  <p className={styles.mark}>Created in WebHeroSchool</p>
-  </div>
 </Router>)
 
 export default App;
